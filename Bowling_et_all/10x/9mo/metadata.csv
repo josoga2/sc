@@ -1,0 +1,4 @@
+﻿RBG,SLXid,Index,sample_name,expected_cells,chemistry,cellranger_cellsfound
+RBG33905,SLX19552,SIGAE3,Hoxb5_Tom_9mo_30jd_Tompos,12600,v3.1,14298
+RBG33906,SLX19552,SIGAF3,Hoxb5_Tom_9mo_30ah_Tompos,12647,v3.1,15369
+RBG33907,SLX19552,SIGAG3,Hoxb5_Tom_9mo_30jd_Tomneg,12200,v3.1,12061

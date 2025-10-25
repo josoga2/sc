@@ -1,0 +1,30 @@
+Data directory contains all the inputs required for the scRNA-Seq data analysis.
+
+Data are:
+- 10x - .h5 count files generated with cellranger, grouped per batch, metadata per 10x run and per sample provided
+- SS2 - Smart-Seq2 data, count tables generated with featureCounts, metadaa provided
+- HSCscore - sets of gene names and model object required for HSCscore calculation
+- ext_data - pre-processed datasets from:
+  - Bowling et al. 2020
+  - Dong et al. 2020
+  - Weinreb et al. 2020
+  - Nestorowa et al. 2020 (sfdata directory)
+- flow - tables with summarised data from flow_cytometry analysis matching the scRNA-Seq samples
+- genedata_v93.csv - gene symbols
+- genesets - various sets of genes used in the analysis
+  - CC_genes_forremoval.txt - gene associated with cell cycle (as used in Dahlin et al. 2018)
+  - TFs_Ravasi2010short.csv - list of transcription factor genes
+  - Y_genes.csv - Y chromosome genes
+  - macosko2015_hum_ccgenes.csv - genes associated with specific cell cycle phases
+
+For 10x data, there are two metadata files:
+- scB5Tom_10x_runmeta.csv - contains metadata for each 10x run (these runs can have multiple biological samples pooled)
+- scB5Tom_10x_samplemeta.csv - contains metadata for each biological sample included in 10x runs
+
+For SS2 there is a single file:
+- scB5Tom_SS2_cellmeta.csv - each row is a cell
+
+  Most of the fields are self-explanatory, the potentially confusing is the combination of the following:
+- mouse_id - indicates from which mouse sequenced cells are coming from
+- sampleid - indicates the sample (= portion of cells) from a given animal. There can be multiple samples per animal (e.g. Tom- and Tom+ cells). Sampleid can repeat between different animals!
+- biosample_id - combination of the mouse_id and sampleid, this is a unique id corresponding to an experimental uni
